@@ -12,7 +12,7 @@ const AddUser = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:4800/users', form);
+            const res = await axios.post('https://user-credentials-2czx.vercel.app/api/users', form);
             setMessage(res.data.Message)
             setForm({name: "", email: "", password: ""})
             console.log("SUCCESS:", res.data);

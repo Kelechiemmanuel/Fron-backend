@@ -7,7 +7,7 @@ const Users = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:4800/users');
+                const response = await axios.get('https://user-credentials-2czx.vercel.app/api/users');
                 setUser(response.data);
             } catch (error) {
                 console.log("REAL ERROR:", error.response?.data);
