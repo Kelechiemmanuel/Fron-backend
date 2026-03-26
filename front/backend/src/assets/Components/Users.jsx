@@ -17,10 +17,16 @@ const Users = () => {
         fetchUsers();
     }, []);
 
+    const formDate = (isoString) => {
+        // if (!isoString) return "N/A";
+        const  date = new Date (isoString);
+        return date.toLocaleString();
+    }
+
     return (
-        <div>
-            <h1>All Users</h1>
-       <div className="p-20">
+        <div className="p-20">
+            <h1 className='text-center mb-5'>All Users</h1>
+       <div >
           <table className="min-w-full border border-gray-300">
             <thead>
               <tr className="bg-amber-200">
@@ -28,6 +34,7 @@ const Users = () => {
                 <th className="py-2 px-4 border">Name</th>
                 <th className="py-2 px-4 border">Email</th>
                 <th className="py-2 px-4 border">Password</th>
+                <th className="py-2 px-4 border">Added At</th>
               </tr>
             </thead>
             <tbody>
@@ -37,6 +44,7 @@ const Users = () => {
                   <td className="py-2 px-4 border">{user.name}</td>
                   <td className="py-2 px-4 border">{user.email}</td>
                   <td className="py-2 px-4 border">{user.password}</td>
+                  <td className="py-2 px-4 border">{formDate(user.createdAt)}</td>
                 </tr>
               ))}
             </tbody>
