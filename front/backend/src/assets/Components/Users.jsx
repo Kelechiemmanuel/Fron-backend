@@ -22,7 +22,7 @@ const Users = () => {
         {Users.map((user, index) => (
             <p key={index}>
                 {user.name} <br />
-                {user.name} <br />
+                {user.email} <br />
                 {user.password}
             
             </p>
