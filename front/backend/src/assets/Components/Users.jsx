@@ -30,7 +30,7 @@ const Users = () => {
           <table className="min-w-full border border-gray-300">
             <thead>
               <tr className="bg-amber-200">
-                <th className="py-2 px-4 border">#</th>
+                <th className="py-2 px-4 border">S/N</th>
                 <th className="py-2 px-4 border">Name</th>
                 <th className="py-2 px-4 border">Email</th>
                 <th className="py-2 px-4 border">Password</th>
